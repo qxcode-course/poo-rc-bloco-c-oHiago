@@ -1,0 +1,37 @@
+2025-11-11 10:00:42, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-11 10:03:02, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:0
+2025-11-11 10:13:23, EXEC, v:1, k:poo@array, mode:LOCK, rate:0
+2025-11-11 10:13:56, EXEC, v:1, k:poo@array, mode:LOCK, rate:0
+2025-11-11 10:14:21, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-11 10:14:22, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 10:18:05, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-11 10:18:07, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 10:20:29, EXEC, v:1, k:poo@budega, mode:FREE
+2025-11-11 10:20:43, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-11 10:20:47, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-11 10:20:49, EXEC, v:1, k:poo@array, mode:LOCK, rate:100
+2025-11-11 10:20:50, EXEC, v:1, k:poo@array, mode:LOCK, rate:100
+2025-11-11 10:20:52, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-11 10:20:54, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-11 10:20:57, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 10:21:54, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-11 10:21:57, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 10:24:34, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-11 15:43:05, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-11 15:43:07, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 15:43:54, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 15:44:16, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 15:52:18, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 15:53:15, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 15:59:32, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-11 16:04:09, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-11 16:04:22, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-11 16:04:26, EXEC, v:1, k:poo@array, mode:LOCK, rate:100
+2025-11-11 16:15:58, EXEC, v:1, k:poo@array, mode:LOCK, rate:100
+2025-11-11 16:16:55, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-11 16:22:28, EXEC, v:1, k:poo@array, mode:LOCK, rate:100
+2025-11-11 16:22:33, EXEC, v:1, k:poo@array, mode:FREE
+2025-11-11 16:29:41, MOVE, v:1, k:poo@array, mode:BACK
+2025-11-11 16:29:41, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-11 16:29:52, EXEC, v:1, k:poo@array, mode:FREE
+2025-11-11 16:46:56, EXEC, v:1, k:poo@array, mode:LOCK, rate:100

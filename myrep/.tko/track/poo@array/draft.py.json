@@ -1,0 +1,229 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-11_10-03-02",
+            "content": "@@ -1,280 +0,0 @@\n-class Foo:%0A    def __init__(self, x:int):%0A        self.x = x%0A    def __str__(self):%0A        return f%22Foo:(%7Bself.x%7D)%22%0A    %0Aclass Listas:%0A    def __init__(self):%0A        self.lista_nums: list%5Bint%5D = %5B1,2,3,4,5%5D%0A%0Adef main():%0A    lista = Listas()%0A%0A    print(lista.lista_nums)%0A%0Amain()%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-12_10-15-22",
+            "content": "@@ -157,49 +157,8 @@\n f):%0A\n-        self.lista_vazia: list%5Bint%5D = %5B%5D%0A\n     \n@@ -240,36 +240,8 @@\n s()%0A\n-    print(lista.lista_vazia)\n %0A   \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-12_10-24-22",
+            "content": "@@ -260,27 +260,8 @@\n ():%0A\n-    line = input()%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-11-12_10-25-18",
+            "content": "@@ -242,25 +242,16 @@\n 2,3,4,5%5D\n-%0A        \n %0A%0Adef ma\n@@ -266,108 +266,42 @@\n   li\n-sta = Listas()%0A    while True:%0A        line = input()%0A        args:list%5Bstr%5D = line.split(%22 %22) %0A    \n+ne = input()%0A    lista = Listas()%0A\n     \n@@ -325,20 +325,16 @@\n _vazia)%0A\n-    \n     prin\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-11-12_10-28-56",
+            "content": "@@ -290,17 +290,97 @@\n s()%0A    \n-%0A\n+while True:%0A        line = input()%0A        args:list%5Bstr%5D = line.split(%22 %22) %0A    \n     prin\n@@ -400,16 +400,20 @@\n _vazia)%0A\n+    \n     prin\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-11-12_10-29-24",
+            "content": "@@ -114,85 +114,8 @@\n %7D)%22%0A\n-    teste = %5B%0A        teste(%221%22)%0A        teste(%222%22)%0A        teste(%223%22)%0A    %5D%0A\n     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-12_10-34-46",
+            "content": "@@ -195,20 +195,8 @@\n     \n-print(teste)\n %0Acla\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-12_10-35-43",
+            "content": "@@ -110,16 +110,110 @@\n lf.x%7D)%22%0A\n+    teste = %5B%0A        teste(%221%22)%0A        teste(%222%22)%0A        teste(%223%22)%0A    %5D%0A    print(teste)%0A\n class Li\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-12_10-35-52",
+            "content": "@@ -250,95 +250,8 @@\n     \n-self.lista_foo: list%5BFoo%5D = %5B%5D%0A    def foo(self, foo:Foo):%0A        self.append(Foo)    \n %0A%0Ade\n@@ -319,40 +319,8 @@\n ia)%0A\n-    lista.lista_nums.append(10)%0A\n     \n@@ -342,21 +342,16 @@\n ta_nums)\n-%0A    \n %0A%0Amain()\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-11-12_10-43-41",
+            "content": "@@ -276,16 +276,69 @@\n oo%5D = %5B%5D\n+%0A    def foo(self, foo:Foo):%0A        self.append(Foo)\n     %0A%0Ade\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-11-12_10-45-27",
+            "content": "@@ -385,45 +385,8 @@\n 10)%0A\n-    lista.lista_nums.insert(-2,-1,0)%0A\n     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-11-12_10-45-34",
+            "content": "@@ -409,17 +409,21 @@\n .insert(\n-0\n+-2,-1\n ,0)%0A    \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-11-12_10-46-10",
+            "content": "@@ -242,42 +242,8 @@\n ,5%5D%0A\n-        self.lista_nums.append(7)%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-11-12_10-46-47",
+            "content": "@@ -316,66 +316,10 @@\n %5B%5D  \n-%0A\n   \n-  def teste(self,foo:Foo):%0A        self.foo.append(foo)\n %0A%0Ade\n@@ -480,38 +480,8 @@\n ms)%0A\n-    lista.teste(Foo(%22teste%22))%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-11-12_10-49-35",
+            "content": "@@ -312,16 +312,74 @@\n %5D = %5B%5D  \n+%0A    def teste(self,foo:Foo):%0A        self.foo.append(foo)\n %0A%0Adef ma\n@@ -532,24 +532,49 @@\n a_nums)%0A    \n+lista.teste(Foo(%22teste%22))\n %0A    %0A%0Amain(\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-12_10-50-04",
+            "content": "@@ -478,44 +478,8 @@\n ms)%0A\n-    tamanho = len(lista.lista_nums)%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-12_10-54-52",
+            "content": "@@ -514,27 +514,8 @@\n ms)%0A\n-    print(tamanho)%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-12_10-55-09",
+            "content": "@@ -478,40 +478,8 @@\n ms)%0A\n-    lista.lista_nums.remove(10)%0A\n     \n@@ -510,17 +510,16 @@\n a_nums)%0A\n-%0A\n     prin\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-12_10-57-57",
+            "content": "@@ -474,24 +474,51 @@\n a_nums)%0A    \n+lista.lista_nums.remove(10)\n %0A    tamanho\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-12_10-59-02",
+            "content": "@@ -482,35 +482,8 @@\n     \n-lista.lista_nums.remove(10)\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-12_10-59-10",
+            "content": "@@ -446,24 +446,30 @@\n rt(0,0)%0A    \n+print(\n lista.lista_\n@@ -476,30 +476,14 @@\n nums\n-.remove(10)%0A    print(\n+)%0A    \n list\n@@ -490,24 +490,34 @@\n a.lista_nums\n+.remove(10\n )%0A    tamanh\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-12_10-59-41",
+            "content": "@@ -478,65 +478,10 @@\n ove(\n-4)%0A    lista.lista_nums.pop(0)%0A    lista.lista_nums.pop(7\n+10\n )%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-12_11-00-50",
+            "content": "@@ -502,17 +502,17 @@\n ums.pop(\n-1\n+0\n )%0A    li\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-11-12_11-01-17",
+            "content": "@@ -530,17 +530,17 @@\n ums.pop(\n-5\n+7\n )%0A    pr\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-11-12_11-01-46",
+            "content": "@@ -192,21 +192,8 @@\n = %5B%5D\n- #lista vazia\n %0A   \n@@ -241,26 +241,8 @@\n 4,5%5D\n- #lista preenchida\n %0A   \n@@ -315,76 +315,9 @@\n  %5B%5D \n-%0A%0A    numeros = (16,20)%0A    for n in numeros:%0A        print(numeros)\n+ \n %0A%0Ade\n@@ -416,134 +416,40 @@\n (10)\n-  #adiciona um num no final da lista%0A    lista.lista_nums.insert(0,0)  #adiciona o 0 na posicao 0 (0(posicao/indice),0(numero)\n+%0A    lista.lista_nums.insert(0,0\n )%0A  \n@@ -480,34 +480,8 @@\n e(4)\n- #remove um num especifico\n %0A   \n@@ -508,25 +508,8 @@\n p(1)\n- #remove indice 1\n %0A   \n@@ -536,25 +536,8 @@\n p(5)\n- #remove indice 5\n %0A   \n@@ -600,32 +600,8 @@\n ums)\n- #diz o tamanho da lista\n %0A%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-11-12_11-07-01",
+            "content": "@@ -352,17 +352,18 @@\n     \n-y = range\n+numeros = \n (16,\n@@ -379,17 +379,23 @@\n or n in \n-y\n+numeros\n :%0A      \n@@ -406,9 +406,15 @@\n int(\n-y\n+numeros\n )%0A%0Ad\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-11-12_11-08-02",
+            "content": "@@ -884,62 +884,8 @@\n ho)%0A\n-    y = range(16,20)%0A    for n in y:%0A        print(y)%0A\n     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-11-12_11-08-58",
+            "content": "@@ -344,16 +344,69 @@\n  = %5B%5D %0A%0A\n+    y = range(16,20)%0A    for n in y:%0A        print(y)\n %0A%0Adef ma\n@@ -861,24 +861,92 @@\n  lista%0A%0A    \n+print(tamanho)%0A    y = range(16,20)%0A    for n in y:%0A        print(y)\n %0A    %0A    %0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-11-12_11-09-15",
+            "content": "@@ -747,21 +747,16 @@\n a_nums)%0A\n-    %0A\n     tama\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-12_11-09-37",
+            "content": "@@ -821,22 +821,8 @@\n     \n-print(tamanho)\n %0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-10-04",
+            "content": "@@ -347,64 +347,9 @@\n %5B%5D %0A\n-    %0A    y = range(3,6)%0A    for n in y:%0A        print(y)\n+%0A\n %0A%0Ade\n@@ -831,16 +831,26 @@\n tamanho)\n+%0A    %0A    \n %0A%0Amain()\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-14-45",
+            "content": "@@ -185,24 +185,36 @@\n t%5Bint%5D = %5B%5D \n+#lista vazia\n %0A        sel\n@@ -251,16 +251,33 @@\n ,3,4,5%5D \n+#lista preenchida\n %0A       \n@@ -497,24 +497,58 @@\n append(10)  \n+#adiciona um num no final da lista\n %0A    lista.l\n@@ -570,16 +570,72 @@\n t(0,0)  \n+#adiciona o 0 na posicao 0 (0(posicao/indice),0(numero))\n %0A    lis\n@@ -658,16 +658,41 @@\n move(4) \n+#remove um num especifico\n %0A    lis\n@@ -712,16 +712,32 @@\n .pop(1) \n+#remove indice 1\n %0A    lis\n@@ -757,16 +757,32 @@\n .pop(5) \n+#remove indice 5\n %0A    pri\n@@ -843,16 +843,39 @@\n a_nums) \n+#diz o tamanho da lista\n %0A%0A    pr\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-16-20",
+            "content": "@@ -331,22 +331,17 @@\n y = \n-list(\n range(\n-10)\n+3,6\n )%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-19-36",
+            "content": "@@ -338,18 +338,16 @@\n t(range(\n-0,\n 10))%0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-19-52",
+            "content": "@@ -338,17 +338,17 @@\n t(range(\n-4\n+0\n ,10))%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-20-20",
+            "content": "@@ -345,16 +345,36 @@\n (4,10))%0A\n+    for n in y:%0A    \n     prin\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-22-08",
+            "content": "@@ -587,44 +587,10 @@\n p(5)\n-%0A    if lista.lista_nums%252==0: %0A   \n  \n+%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-12_11-24-24",
+            "content": "@@ -584,16 +584,51 @@\n .pop(5)%0A\n+    if lista.lista_nums%252==0: %0A    \n     prin\n@@ -647,16 +647,21 @@\n a_nums)%0A\n+    %0A\n     tama\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-11-12_11-24-54",
+            "content": "@@ -430,35 +430,8 @@\n ia)%0A\n-    print(lista.lista_foo)%0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-11-12_11-26-09",
+            "content": "@@ -615,90 +615,8 @@\n (5)%0A\n-    separador = '-'%0A    frase = separador.join(lista.lista_nums)%0A    print(frase)%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-12_15-36-37",
+            "content": "@@ -662,13 +662,8 @@\n oin(\n-str, \n list\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-12_15-39-00",
+            "content": "@@ -662,12 +662,8 @@\n oin(\n-map(\n str,\n@@ -680,17 +680,16 @@\n ta_nums)\n-)\n %0A    pri\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-12_15-39-20",
+            "content": "@@ -658,16 +658,20 @@\n or.join(\n+map(\n str, lis\n@@ -680,24 +680,25 @@\n .lista_nums)\n+)\n %0A    print(f\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-12_15-39-37",
+            "content": "@@ -662,12 +662,8 @@\n oin(\n-map(\n str,\n@@ -680,17 +680,16 @@\n ta_nums)\n-)\n %0A    pri\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-12_15-39-52",
+            "content": "class Foo:\n    def __init__(self, x:int):\n        self.x = x\n    def __str__(self):\n        return f\"Foo:({self.x})\"\nclass Listas:\n    def __init__(self):\n        self.lista_vazia: list[int] = [] \n        self.lista_nums: list[int] = [1,2,3,4,5] \n        self.lista_nums.append(7)\n        self.lista_foo: list[Foo] = [] \n    \n    y = list(range(4,10))\n    print(y)\n\ndef main():\n    lista = Listas()\n    \n    print(lista.lista_vazia)\n    print(lista.lista_foo)\n    lista.lista_nums.append(10)  \n    lista.lista_nums.insert(0,0)  \n    lista.lista_nums.remove(4) \n    lista.lista_nums.pop(1) \n    lista.lista_nums.pop(5)\n    separador = '-'\n    frase = separador.join(map(str, lista.lista_nums))\n    print(frase)\n    print(lista.lista_nums)\n    tamanho = len(lista.lista_nums) \n\n    print(tamanho)\n\nmain()\n",
+            "lines": "34"
+        }
+    ]
+}
