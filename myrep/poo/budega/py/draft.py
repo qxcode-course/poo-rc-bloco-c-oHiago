@@ -18,24 +18,24 @@ class Mercantil:
 
     def chamar(self, index: int):
         if index < 0 or index >= len(self.caixas):
-            print("index invalido")
+            print("fail: index invalido")
             return
         if self.caixas[index] is not None:
-            print("caixa ocupado")
+            print("fail: caixa ocupado")
             return
         if len(self.espera) == 0:
-            print("ninguem esperado")
+            print("fail: sem clientes")
             return
         
-        self.caixas[index] = self.espera[0]
+        self.caixas[index] = self.espera.pop(0)
         
 
     def finalizar(self, index: int) -> Pessoa | None:
         if index < 0 or index >= len(self.caixas):
-            print("index invalido")
+            print("fail: index invalido")
             return None
         if self.caixas[index] is None:
-            print("caixa vazio")
+            print("fail: caixa vazio")
             return None
         
         pessoa = self.caixas[index]
@@ -45,7 +45,7 @@ class Mercantil:
     def __str__(self):
         caixas = ", ".join([str(x)  if x else "-----" for x in self.caixas])
         espera = ", ".join([str(x) for x in self.espera])
-        return f"Caixas: [{caixas}]\nEspera:[{espera}]"
+        return f"Caixas: [{caixas}]\nEspera: [{espera}]"
 
 def main():
     mercantil: Mercantil | None = None
@@ -62,7 +62,7 @@ def main():
         elif args[0] =="init": 
             n_caixas = int(args[1]) 
             mercantil = Mercantil(n_caixas)
-        elif args[0] == "enter":
+        elif args[0] == "arrive":
             nome = args[1]
             mercantil.chegar(Pessoa(nome))
         elif args[0] == "call":
@@ -71,6 +71,7 @@ def main():
         elif args[0] == "finish":
             index = int(args[1])
             mercantil.finalizar(index)
-
+        else:
+            print("fail: comando não encontrado")
 if __name__ == "__main__":
     main()       

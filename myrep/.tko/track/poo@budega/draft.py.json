@@ -102,8 +102,68 @@
         },
         {
             "label": "2025-11-13_14-48-25",
-            "content": "class Pessoa:\n    def __init__ (self, nome: str):\n        self.__nome = nome \n    def getNome (self):\n        return self.__nome \n    def __str__(self):\n        return f\"{self.__nome}\"\n    \nclass Mercantil:\n    def __init__(self, n_caixas: int):\n        self.espera: list[Pessoa] = []\n        self.caixas: list[Pessoa | None ] = []\n        for _ in range (n_caixas):\n            self.caixas.append(None)\n\n    def chegar(self, pessoa: Pessoa):\n        self.espera.append(pessoa)\n\n    def chamar(self, index: int):\n        if index < 0 or index >= len(self.caixas):\n            print(\"index invalido\")\n            return\n        if self.caixas[index] is not None:\n            print(\"caixa ocupado\")\n            return\n        if len(self.espera) == 0:\n            print(\"ninguem esperado\")\n            return\n        \n        self.caixas[index] = self.espera[0]\n        \n\n    def finalizar(self, index: int) -> Pessoa | None:\n        if index < 0 or index >= len(self.caixas):\n            print(\"index invalido\")\n            return None\n        if self.caixas[index] is None:\n            print(\"caixa vazio\")\n            return None\n        \n        pessoa = self.caixas[index]\n        self.caixas[index] = None\n        return pessoa\n    \n    def __str__(self):\n        caixas = \", \".join([str(x)  if x else \"-----\" for x in self.caixas])\n        espera = \", \".join([str(x) for x in self.espera])\n        return f\"Caixas: [{caixas}]\\nEspera:[{espera}]\"\n\ndef main():\n    mercantil: Mercantil | None = None\n\n    while True: \n        line = input() \n        print(\"$\" + line) \n        args = line.split() \n        \n        if args[0] == \"end\": \n            break \n        elif args[0] ==\"show\": \n            print(mercantil) \n        elif args[0] ==\"init\": \n            n_caixas = int(args[1]) \n            mercantil = Mercantil(n_caixas)\n        elif args[0] == \"enter\":\n            nome = args[1]\n            mercantil.chegar(Pessoa(nome))\n        elif args[0] == \"call\":\n            index = int(args[1])\n            mercantil.chamar(index)\n        elif args[0] == \"finish\":\n            index = int(args[1])\n            mercantil.finalizar(index)\n\nif __name__ == \"__main__\":\n    main()       \n",
+            "content": "@@ -1432,17 +1432,16 @@\n nEspera:\n- \n %5B%7Bespera\n",
             "lines": "76"
+        },
+        {
+            "label": "2025-11-13_14-50-46",
+            "content": "@@ -2141,72 +2141,8 @@\n dex)\n-%0A        else:%0A            print(%22fail: comando n%C3%A3o encontrado%22)\n %0A%0Aif\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-11-13_14-52-49",
+            "content": "@@ -1857,14 +1857,13 @@\n == %22\n-arrive\n+enter\n %22:%0A \n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-13_14-53-15",
+            "content": "@@ -853,12 +853,8 @@\n pera\n-.pop\n %5B0%5D%0A\n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-13_14-59-23",
+            "content": "@@ -2208,16 +2208,47 @@\n rado%22)%0A%0A\n+if __name__ == %22__main__%22:%0A    \n main()  \n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-11-13_14-59-43",
+            "content": "@@ -2211,39 +2211,9 @@\n o%22)%0A\n-if __name__ == %22__main__%22:%0A    \n+%0A\n main\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-13_15-00-39",
+            "content": "@@ -849,16 +849,20 @@\n f.espera\n+.pop\n %5B0%5D%0A    \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-13_15-02-10",
+            "content": "@@ -853,18 +853,10 @@\n pera\n-.pop%5Bindex\n+%5B0\n %5D%0A  \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-13_15-04-36",
+            "content": "@@ -854,17 +854,21 @@\n era.pop%5B\n-0\n+index\n %5D%0A      \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-13_15-04-55",
+            "content": "@@ -857,11 +857,11 @@\n .pop\n-(0)\n+%5B0%5D\n %0A   \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-13_15-08-01",
+            "content": "@@ -568,38 +568,32 @@\n          print(%22\n-fail: \n index invalido%22)\n@@ -585,32 +585,32 @@\n ndex invalido%22)%0A\n+\n             retu\n@@ -670,30 +670,24 @@\n      print(%22\n-fail: \n caixa ocupad\n@@ -762,22 +762,16 @@\n  print(%22\n-fail: \n ninguem \n@@ -991,22 +991,16 @@\n  print(%22\n-fail: \n index in\n@@ -1067,24 +1067,24 @@\n x%5D is None:%0A\n+\n             \n@@ -1090,22 +1090,16 @@\n  print(%22\n-fail: \n caixa va\n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-13_15-09-18",
+            "content": "@@ -784,20 +784,24 @@\n il: \n-sem clientes\n+ninguem esperado\n %22)%0A \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-11-13_15-10-22",
+            "content": "class Pessoa:\n    def __init__ (self, nome: str):\n        self.__nome = nome \n    def getNome (self):\n        return self.__nome \n    def __str__(self):\n        return f\"{self.__nome}\"\n    \nclass Mercantil:\n    def __init__(self, n_caixas: int):\n        self.espera: list[Pessoa] = []\n        self.caixas: list[Pessoa | None ] = []\n        for _ in range (n_caixas):\n            self.caixas.append(None)\n\n    def chegar(self, pessoa: Pessoa):\n        self.espera.append(pessoa)\n\n    def chamar(self, index: int):\n        if index < 0 or index >= len(self.caixas):\n            print(\"fail: index invalido\")\n            return\n        if self.caixas[index] is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        if len(self.espera) == 0:\n            print(\"fail: sem clientes\")\n            return\n        \n        self.caixas[index] = self.espera.pop(0)\n        \n\n    def finalizar(self, index: int) -> Pessoa | None:\n        if index < 0 or index >= len(self.caixas):\n            print(\"fail: index invalido\")\n            return None\n        if self.caixas[index] is None:\n            print(\"fail: caixa vazio\")\n            return None\n        \n        pessoa = self.caixas[index]\n        self.caixas[index] = None\n        return pessoa\n    \n    def __str__(self):\n        caixas = \", \".join([str(x)  if x else \"-----\" for x in self.caixas])\n        espera = \", \".join([str(x) for x in self.espera])\n        return f\"Caixas: [{caixas}]\\nEspera: [{espera}]\"\n\ndef main():\n    mercantil: Mercantil | None = None\n\n    while True: \n        line = input() \n        print(\"$\" + line) \n        args = line.split() \n        \n        if args[0] == \"end\": \n            break \n        elif args[0] ==\"show\": \n            print(mercantil) \n        elif args[0] ==\"init\": \n            n_caixas = int(args[1]) \n            mercantil = Mercantil(n_caixas)\n        elif args[0] == \"arrive\":\n            nome = args[1]\n            mercantil.chegar(Pessoa(nome))\n        elif args[0] == \"call\":\n            index = int(args[1])\n            mercantil.chamar(index)\n        elif args[0] == \"finish\":\n            index = int(args[1])\n            mercantil.finalizar(index)\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\nif __name__ == \"__main__\":\n    main()       \n",
+            "lines": "77"
         }
     ]
 }

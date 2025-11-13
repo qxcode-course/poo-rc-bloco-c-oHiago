@@ -34,3 +34,22 @@
 2025-11-13 14:48:25, EXEC, v:1, k:poo@budega, mode:FULL, rate:0, size:76
 2025-11-13 14:48:45, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
 2025-11-13 14:48:53, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-13 14:50:26, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-13 14:50:31, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-13 14:50:46, EXEC, v:1, k:poo@budega, mode:FULL, rate:10, size:76
+2025-11-13 14:52:49, EXEC, v:1, k:poo@budega, mode:FULL, rate:10, size:78
+2025-11-13 14:53:16, EXEC, v:1, k:poo@budega, mode:FULL, rate:30, size:78
+2025-11-13 14:59:23, EXEC, v:1, k:poo@budega, mode:FULL, rate:20, size:78
+2025-11-13 14:59:43, EXEC, v:1, k:poo@budega, mode:FULL, rate:20, size:77
+2025-11-13 15:00:39, EXEC, v:1, k:poo@budega, mode:FULL, rate:20, size:77
+2025-11-13 15:02:10, EXEC, v:1, k:poo@budega, mode:FULL, rate:30, size:77
+2025-11-13 15:04:36, EXEC, v:1, k:poo@budega, mode:FULL, rate:20, size:77
+2025-11-13 15:04:55, EXEC, v:1, k:poo@budega, mode:FULL, rate:20, size:77
+2025-11-13 15:08:01, EXEC, v:1, k:poo@budega, mode:FULL, rate:50, size:77
+2025-11-13 15:09:18, EXEC, v:1, k:poo@budega, mode:FULL, rate:70, size:77
+2025-11-13 15:09:49, EXEC, v:1, k:poo@budega, mode:FULL, rate:70
+2025-11-13 15:10:22, EXEC, v:1, k:poo@budega, mode:FULL, rate:90, size:77
+2025-11-13 15:11:49, MOVE, v:1, k:poo@budega, mode:BACK
+2025-11-13 15:12:00, SELF, v:1, k:poo@budega, rate:90
+2025-11-13 15:14:07, MOVE, v:1, k:poo@lapiseira, mode:PICK
+2025-11-13 15:48:40, MOVE, v:1, k:poo@lapiseira, mode:BACK
