@@ -38,6 +38,17 @@ class Pulapula:
            criança = self.pulapula.pop()
            self.espera.insert(0,criança)
 
+    def remover(self, nome: str):
+        for i, criança in enumerate (self.espera):
+            if criança.getNome() == nome:
+                del self.espera[i]
+                return
+            
+        for i, criança in enumerate (self.pulapula):
+            if criança.getNome() == nome:
+                del self.pulapula[i]
+                return
+
     def __str__(self):
         espera = ", ".join(str(x) for x in self.espera)
         pulapula = ", ".join(str(x) for x in self.pulapula)
@@ -53,16 +64,19 @@ def main():
 
         if args[0] == "end":
             break
-        if args[0] == "show":
+        elif args[0] == "show":
             print(pula_pula)
-        if args[0] == "arrive":
+        elif args[0] == "arrive":
             nome = args[1]
             idade = int(args[2])
             pula_pula.fila(Criança(nome,idade))
-        if args[0] == "enter":
+        elif args[0] == "enter":
             pula_pula.entrar()
-        if args[0] == "leave":
+        elif args[0] == "leave":
             pula_pula.sair()
+        elif args[0] == "remove":
+            nome = args[1]
+            pula_pula.remover(nome)
 
 if __name__ == "__main__":
     main()
