@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-14_07-54-02",
+            "content": "@@ -1,1310 +0,0 @@\n-#Inserir crian%C3%A7as na fila de espera do pula pula%0A#Mover a primeira crian%C3%A7a da fila de espera do pula pula para dentro do pula pula.%0A#Mover a primeira crian%C3%A7a que entrou no pula pula para o final da fila de espera.%0A%0A%0Aclass Pessoa:%0A    def __init__(self,nome:str):%0A        self.__nome = nome%0A    def getNome(self):%0A        return self.__nome%0A    def __str__(self):%0A        return f%22%7Bself.__nome%7D%22%0A%0Aclass Pulapula:%0A    def __init__(self):%0A        self.espera: list%5BPessoa%5D = %5B%5D%0A        self.pulapula: list%5BPessoa %7C None%5D = %5B%5D%0A%0A    def fila(self,pessoa: Pessoa):%0A        self.espera.append(pessoa)%0A%0A    def entrar(self):%0A        if self.espera is None:%0A            print(%22fail: ninguem na fila%22)%0A            return%0A        else:%0A            self.espera.pop(0)%0A%0A    def sair(self):%0A        if self.espera is None:%0A            print(%22fail: ninguem na fila%22)%0A            return%0A        else:%0A            self.pulapula.pop(0)%0A%0Adef main():%0A    pula_pula: Pulapula %7C None = None%0A%0A    while True:%0A        line = input()%0A        print(%22$%22+line)%0A        args = line.split()%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        if args%5B0%5D == %22show%22:%0A            print(%22pula_pula%22)%0A        if args%5B0%5D == %22arrive%22:%0A            nome = args%5B1%5D%0A            pula_pula.entrar(Pessoa(nome))%0A%0Aif __name__ == %22__main__%22:%0A    main()\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-14_07-55-34",
+            "content": "@@ -1244,20 +1244,22 @@\n la_pula.\n-fila\n+entrar\n (Pessoa(\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-14_07-56-34",
+            "content": "#Inserir crian\u00e7as na fila de espera do pula pula\n#Mover a primeira crian\u00e7a da fila de espera do pula pula para dentro do pula pula.\n#Mover a primeira crian\u00e7a que entrou no pula pula para o final da fila de espera.\n\n\nclass Pessoa:\n    def __init__(self,nome:str):\n        self.__nome = nome\n    def getNome(self):\n        return self.__nome\n    def __str__(self):\n        return f\"{self.__nome}\"\n\nclass Pulapula:\n    def __init__(self):\n        self.espera: list[Pessoa] = []\n        self.pulapula: list[Pessoa | None] = []\n\n    def fila(self,pessoa: Pessoa):\n        self.espera.append(pessoa)\n\n    def entrar(self):\n        if self.espera is None:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n            self.espera.pop(0)\n\n    def sair(self):\n        if self.espera is None:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n            self.pulapula.pop(0)\n\ndef main():\n    pula_pula: Pulapula | None = None\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        if args[0] == \"show\":\n            print(\"pula_pula\")\n        if args[0] == \"arrive\":\n            nome = args[1]\n            pula_pula.fila(Pessoa(nome))\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "53"
+        }
+    ]
+}
