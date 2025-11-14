@@ -31,12 +31,10 @@ class Pulapula:
             self.pulapula.insert(0,criança) 
 
     def sair(self):
-        if not self.espera:
-            print("fail: ninguem na fila")
-            return
-        else:
-           criança = self.pulapula.pop()
-           self.espera.insert(0,criança)
+        if not self.pulapula:
+            return 
+        criança = self.pulapula.pop()
+        self.espera.insert(0,criança)
 
     def remover(self, nome: str):
         for i, criança in enumerate (self.espera):
@@ -77,6 +75,8 @@ def main():
         elif args[0] == "remove":
             nome = args[1]
             pula_pula.remover(nome)
+        else:
+            print("fail: comando não encontrado")
 
 if __name__ == "__main__":
     main()

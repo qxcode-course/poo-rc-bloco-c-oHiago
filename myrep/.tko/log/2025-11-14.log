@@ -55,3 +55,16 @@
 2025-11-14 17:35:08, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:60, size:82
 2025-11-14 17:40:39, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:82
 2025-11-14 17:41:27, MOVE, v:1, k:poo@pula-pula, mode:BACK
+2025-11-14 20:30:45, MOVE, v:1, k:poo@pula-pula, mode:PICK
+2025-11-14 20:31:42, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70
+2025-11-14 20:33:51, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70
+2025-11-14 20:39:08, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:84
+2025-11-14 20:39:42, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:84
+2025-11-14 20:40:30, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:84
+2025-11-14 20:43:28, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:81
+2025-11-14 20:44:46, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:70, size:84
+2025-11-14 20:48:10, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:90, size:83
+2025-11-14 20:53:29, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:30, size:83
+2025-11-14 20:54:20, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:30
+2025-11-14 20:55:16, EXEC, v:1, k:poo@pula-pula, mode:FULL, rate:90, size:82
+2025-11-14 20:55:19, MOVE, v:1, k:poo@pula-pula, mode:BACK
