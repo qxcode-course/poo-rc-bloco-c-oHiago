@@ -12,8 +12,178 @@
         },
         {
             "label": "2025-11-14_07-56-34",
-            "content": "#Inserir crian\u00e7as na fila de espera do pula pula\n#Mover a primeira crian\u00e7a da fila de espera do pula pula para dentro do pula pula.\n#Mover a primeira crian\u00e7a que entrou no pula pula para o final da fila de espera.\n\n\nclass Pessoa:\n    def __init__(self,nome:str):\n        self.__nome = nome\n    def getNome(self):\n        return self.__nome\n    def __str__(self):\n        return f\"{self.__nome}\"\n\nclass Pulapula:\n    def __init__(self):\n        self.espera: list[Pessoa] = []\n        self.pulapula: list[Pessoa | None] = []\n\n    def fila(self,pessoa: Pessoa):\n        self.espera.append(pessoa)\n\n    def entrar(self):\n        if self.espera is None:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n            self.espera.pop(0)\n\n    def sair(self):\n        if self.espera is None:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n            self.pulapula.pop(0)\n\ndef main():\n    pula_pula: Pulapula | None = None\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        if args[0] == \"show\":\n            print(\"pula_pula\")\n        if args[0] == \"arrive\":\n            nome = args[1]\n            pula_pula.fila(Pessoa(nome))\n\nif __name__ == \"__main__\":\n    main()",
+            "content": "@@ -937,18 +937,17 @@\n ula_pula\n- =\n+:\n  Pulapul\n@@ -948,18 +948,29 @@\n ulapula \n-()\n+%7C None = None\n %0A%0A    wh\n",
             "lines": "53"
+        },
+        {
+            "label": "2025-11-14_08-18-43",
+            "content": "@@ -1140,16 +1140,17 @@\n   print(\n+%22\n pula_pul\n@@ -1150,16 +1150,17 @@\n ula_pula\n+%22\n )%0A      \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-14_08-19-17",
+            "content": "@@ -916,154 +916,8 @@\n 0)%0A%0A\n-    def __str__(self):%0A        pulapula = %22, %22.join(%5Bstr(x)%5D for x in self.pulapula)%0A        espera = %22, %22.join(%5Bstr(x)%5D for x in self.pulapula)%0A%0A\n def \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-14_08-35-42",
+            "content": "@@ -1060,53 +1060,8 @@\n ula)\n-%0A        return f%22%5B%7Bespera%7D%5D =%3E %5B%7Bpulapula%7D%5D%22\n %0A%0Ade\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-14_08-37-21",
+            "content": "@@ -625,12 +625,8 @@\n  if \n-not \n self\n@@ -632,16 +632,24 @@\n f.espera\n+ is None\n :%0A      \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-14_08-38-44",
+            "content": "@@ -721,33 +721,24 @@\n %0A           \n- pessoa =\n  self.espera\n@@ -748,49 +748,8 @@\n p(0)\n-%0A            self.pulapula.append(pessoa)\n %0A%0A  \n@@ -889,16 +889,8 @@\n     \n-pessoa =\n  sel\n@@ -910,46 +910,8 @@\n p(0)\n-%0A           self.espera.append(pessoa)\n %0A%0A  \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-14_08-40-26",
+            "content": "@@ -819,36 +819,32 @@\n lf):%0A        if \n-not \n self.espera:%0A   \n@@ -830,32 +830,40 @@\n   if self.espera\n+ is None\n :%0A            pr\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-14_08-41-35",
+            "content": "@@ -215,22 +215,21 @@\n %0A%0Aclass \n-Crian%C3%A7\n+Pesso\n a:%0A    d\n@@ -455,22 +455,21 @@\n a: list%5B\n-Crian%C3%A7\n+Pesso\n a%5D = %5B%5D%0A\n@@ -496,22 +496,21 @@\n a: list%5B\n-Crian%C3%A7\n+Pesso\n a %7C None\n@@ -543,22 +543,21 @@\n pessoa: \n-Crian%C3%A7\n+Pesso\n a):%0A    \n@@ -718,38 +718,37 @@\n se:%0A            \n-crian%C3%A7\n+pesso\n a = self.espera.\n@@ -779,38 +779,37 @@\n pulapula.append(\n-crian%C3%A7\n+pesso\n a)%0A%0A    def sair\n@@ -931,22 +931,21 @@\n         \n-crian%C3%A7\n+pesso\n a = self\n@@ -991,22 +991,21 @@\n .append(\n-crian%C3%A7\n+pesso\n a)%0A%0A    \n@@ -1044,38 +1044,40 @@\n ula = %22, %22.join(\n+%5B\n str(x)\n+%5D\n  for x in self.p\n@@ -1112,22 +1112,24 @@\n  %22.join(\n+%5B\n str(x)\n+%5D\n  for x i\n@@ -1520,14 +1520,13 @@\n ila(\n-Crian%C3%A7\n+Pesso\n a(no\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-14_08-57-47",
+            "content": "@@ -1039,21 +1039,23 @@\n         \n-esper\n+pulapul\n a = %22, %22\n@@ -1081,21 +1081,23 @@\n in self.\n-esper\n+pulapul\n a)%0A     \n@@ -1091,39 +1091,37 @@\n lapula)%0A        \n-pulapul\n+esper\n a = %22, %22.join(st\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-14_08-59-30",
+            "content": "@@ -288,33 +288,8 @@\n ome%0A\n-        self.idade = int%0A\n     \n@@ -391,21 +391,8 @@\n ome%7D\n-:%7Bself.idade%7D\n %22%0A%0Ac\n@@ -1495,41 +1495,8 @@\n %5B1%5D%0A\n-            idade = int(args%5B1%5D)%0A\n     \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-11-14_09-01-59",
+            "content": "@@ -1562,9 +1562,9 @@\n rgs%5B\n-2\n+1\n %5D)%0A \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-14_09-02-22",
+            "content": "@@ -258,18 +258,8 @@\n :str\n-,idade:int\n ):%0A \n@@ -293,26 +293,24 @@\n        self.\n-__\n idade = idad\n@@ -306,20 +306,18 @@\n dade = i\n-dade\n+nt\n %0A    def\n@@ -363,60 +363,8 @@\n ome%0A\n-    def getIdade(self):%0A        return self.__idade%0A\n     \n@@ -419,18 +419,16 @@\n %7D:%7Bself.\n-__\n idade%7D%22%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-14_09-04-04",
+            "content": "@@ -1669,22 +1669,16 @@\n n%C3%A7a(nome\n-,idade\n ))%0A%0Aif _\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-04-45",
+            "content": "@@ -891,19 +891,22 @@\n ulapula.\n-pop\n+append\n (crian%C3%A7a\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-05-21",
+            "content": "@@ -891,25 +891,20 @@\n ulapula.\n-insert(0,\n+pop(\n crian%C3%A7a)\n@@ -1098,17 +1098,15 @@\n era.\n-insert(0,\n+append(\n cria\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-10-10",
+            "content": "@@ -644,22 +644,21 @@\n la(self,\n-crian%C3%A7\n+pesso\n a: Crian\n@@ -689,22 +689,21 @@\n .append(\n-crian%C3%A7\n+pesso\n a)%0A%0A    \n@@ -858,22 +858,19 @@\n .espera.\n-insert\n+pop\n (0)%0A    \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-11-32",
+            "content": "@@ -860,19 +860,22 @@\n .espera.\n-pop\n+insert\n (0)%0A    \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-11-51",
+            "content": "@@ -860,22 +860,22 @@\n .espera.\n-append\n+pop(0)\n %0A       \n@@ -1071,22 +1071,22 @@\n ulapula.\n-append\n+pop(0)\n %0A       \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-13-58",
+            "content": "@@ -687,18 +687,15 @@\n era.\n-insert(0, \n+append(\n cria\n@@ -860,22 +860,22 @@\n .espera.\n-pop(0)\n+append\n %0A       \n@@ -893,23 +893,25 @@\n ulapula.\n-append(\n+insert(0,\n crian%C3%A7a)\n@@ -1075,14 +1075,14 @@\n ula.\n-pop(0)\n+append\n %0A   \n@@ -1093,39 +1093,41 @@\n     self.espera.\n-append(\n+insert(0,\n crian%C3%A7a)%0A%0A    de\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-22-05",
+            "content": "@@ -1686,126 +1686,8 @@\n de))\n-%0A        if args%5B0%5D == %22enter%22:%0A            nome = args%5B1%5D%0A            nome = idade %5B2%5D%0A            pula_pula.entrar()\n %0A%0Aif\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-14_09-28-13",
+            "content": "@@ -1714,16 +1714,72 @@\n enter%22:%0A\n+            nome = args%5B1%5D%0A            nome = idade %5B2%5D%0A\n         \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-14_09-28-30",
+            "content": "@@ -871,9 +871,9 @@\n pop(\n-3\n+0\n )%0A  \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_09-29-16",
+            "content": "@@ -863,25 +863,25 @@\n .espera.pop(\n-0\n+3\n )%0A          \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_09-29-27",
+            "content": "@@ -867,16 +867,17 @@\n era.pop(\n+0\n )%0A      \n@@ -911,17 +911,16 @@\n crian%C3%A7a)\n- \n %0A%0A    de\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-39-35",
+            "content": "@@ -690,16 +690,19 @@\n .insert(\n+0, \n crian%C3%A7a)\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-40-02",
+            "content": "@@ -694,11 +694,8 @@\n ert(\n--1,\n cria\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-40-16",
+            "content": "@@ -690,17 +690,18 @@\n .insert(\n-0\n+-1\n ,crian%C3%A7a\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-40-27",
+            "content": "@@ -894,19 +894,22 @@\n ulapula.\n-pop\n+append\n (crian%C3%A7a\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-41-09",
+            "content": "@@ -894,22 +894,19 @@\n ulapula.\n-insert\n+pop\n (crian%C3%A7a\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-41-33",
+            "content": "@@ -893,34 +893,32 @@\n pulapula.insert(\n-0,\n crian%C3%A7a) %0A%0A    d\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-41-51",
+            "content": "@@ -1749,68 +1749,8 @@\n ar()\n-%0A        if args%5B0%5D == %22leave%22:%0A            pula_pula.sair()\n %0A%0Aif\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-11-14_15-43-04",
+            "content": "@@ -1073,24 +1073,25 @@\n ulapula.pop(\n+0\n )%0A          \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-14_15-43-29",
+            "content": "@@ -1109,18 +1109,16 @@\n .append(\n-0,\n crian%C3%A7a)\n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-14_15-44-05",
+            "content": "@@ -1094,38 +1094,38 @@\n     self.espera.\n-insert\n+append\n (0,crian%C3%A7a)%0A%0A   \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-11-14_15-44-28",
+            "content": "#Inserir crian\u00e7as na fila de espera do pula pula\n#Mover a primeira crian\u00e7a da fila de espera do pula pula para dentro do pula pula.\n#Mover a primeira crian\u00e7a que entrou no pula pula para o final da fila de espera.\n\n\nclass Crian\u00e7a:\n    def __init__(self,nome:str,idade:int):\n        self.__nome = nome\n        self.__idade = idade\n    def getNome(self):\n        return self.__nome\n    def getIdade(self):\n        return self.__idade\n    def __str__(self):\n        return f\"{self.__nome}:{self.__idade}\"\n\nclass Pulapula:\n    def __init__(self):\n        self.espera: list[Crian\u00e7a] = []\n        self.pulapula: list[Crian\u00e7a | None] = []\n\n    def fila(self,crian\u00e7a: Crian\u00e7a):\n        self.espera.insert(0,crian\u00e7a)\n\n    def entrar(self):\n        if not self.espera:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n            crian\u00e7a = self.espera.pop()\n            self.pulapula.insert(0,crian\u00e7a) \n\n    def sair(self):\n        if not self.espera:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n           crian\u00e7a = self.pulapula.pop()\n           self.espera.insert(0,crian\u00e7a)\n\n    def __str__(self):\n        espera = \", \".join(str(x) for x in self.espera)\n        pulapula = \", \".join(str(x) for x in self.pulapula)\n        return f\"[{espera}] => [{pulapula}]\"\n\ndef main():\n    pula_pula = Pulapula ()\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        if args[0] == \"show\":\n            print(pula_pula)\n        if args[0] == \"arrive\":\n            nome = args[1]\n            idade = int(args[2])\n            pula_pula.fila(Crian\u00e7a(nome,idade))\n        if args[0] == \"enter\":\n            pula_pula.entrar()\n        if args[0] == \"leave\":\n            pula_pula.sair()\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "68"
         }
     ]
 }
