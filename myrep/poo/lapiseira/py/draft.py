@@ -29,45 +29,59 @@ class Grafite:
 
 class Lapiseira:
      def __init__(self, thickness: float = 0.0):
-        self.tip: Grafite | None = None
         self.thickness = thickness
-     def inserir(self, tip: Grafite) -> bool:
-        if self.tip !=  None:
-            print ("fail: ja existe grafite")
-            return False
-        if self.thickness != tip.get_thickness():
-            print ("fail: calibre incompativel")
+        self.tambor: list[Grafite] = []
+        self.bico: Grafite | None = None
+
+     def inserir(self, bico: Grafite) -> bool:
+        
+        if self.thickness != bico.get_thickness():
+            print ("fail: calibre incompatível")
             return False 
-        self.tip = tip
+        self.tambor.append(bico)
         return True
+     
+     def puxar(self):
+         
+        if self.bico is not None:
+            print("fail: ja existe grafite no bico")
+            return
+        if not self.tambor:
+            print("fail: tambor vazio")
+            return
+        self.bico = self.tambor.pop(0)
+        
+             
 
      def remover(self) -> Grafite | None: 
-        if self.tip == None:
-            print ("fail: nao existe grafite")
+        if self.tambor is not None:
             return None
-        aux: Grafite = self.tip
-        self.tip = None
+        aux = self.bico
+        self.bico = None
         return aux
+         
      def escrever(self):
-        if self.tip == None:
+        if self.bico == None:
             print("fail: nao existe grafite")
             return
-        if self.tip.get_size() <= 10:
+        if self.bico.get_size() <= 10:
             print("fail: tamanho insuficiente")
             return
 
-        gasto = self.tip.usagePerSheet()
-        novo_tamanho = self.tip.get_size() - gasto
+        gasto = self.bico.usagePerSheet()
+        novo_tamanho = self.bico.get_size() - gasto
 
-        if self.tip.get_size() - self.tip.usagePerSheet() < 10:
+        if self.bico.get_size() - self.bico.usagePerSheet() < 10:
             print ("fail: folha incompleta")
-            self.tip.set_size(10)
+            self.bico.set_size(10)
             return
 
-        self.tip.set_size(novo_tamanho)
+        self.bico.set_size(novo_tamanho)
 
      def __str__(self):
-        return f"calibre: {self.thickness}, grafite: {self.tip if self.tip != None else "null"}"
+        tambor = "".join(str(x) for x in self.tambor)
+        bico = str(self.bico) if self.bico else "[]"
+        return f"calibre: {self.thickness}, bico: {bico}, tambor: <{tambor}>"
 
 def main ():
      lapiseira = Lapiseira()
@@ -89,10 +103,12 @@ def main ():
             size = int(args[3])
             grafite = Grafite(thickness,hardness,size)
             lapiseira.inserir(grafite) 
+        elif args[0] == "pull":
+            lapiseira.puxar()   
         elif args[0] == "remove":
             grafite = lapiseira.remover()
         elif args[0] == "write":
             lapiseira.escrever()
-            
+
 if __name__ == "__main__":    
     main()
