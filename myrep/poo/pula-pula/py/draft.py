@@ -41,11 +41,13 @@ class Pulapula:
             if criança.getNome() == nome:
                 del self.espera[i]
                 return
-            
+           
         for i, criança in enumerate (self.pulapula):
             if criança.getNome() == nome:
                 del self.pulapula[i]
                 return
+            
+        print (f"fail: {nome} nao esta no pula-pula")
 
     def __str__(self):
         espera = ", ".join(str(x) for x in self.espera)

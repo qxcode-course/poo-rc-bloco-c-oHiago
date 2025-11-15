@@ -272,8 +272,38 @@
         },
         {
             "label": "2025-11-14_20-55-16",
-            "content": "#Inserir crian\u00e7as na fila de espera do pula pula\n#Mover a primeira crian\u00e7a da fila de espera do pula pula para dentro do pula pula.\n#Mover a primeira crian\u00e7a que entrou no pula pula para o final da fila de espera.\n\n\nclass Crian\u00e7a:\n    def __init__(self,nome:str,idade:int):\n        self.__nome = nome\n        self.__idade = idade\n    def getNome(self):\n        return self.__nome\n    def getIdade(self):\n        return self.__idade\n    def __str__(self):\n        return f\"{self.__nome}:{self.__idade}\"\n\nclass Pulapula:\n    def __init__(self):\n        self.espera: list[Crian\u00e7a] = []\n        self.pulapula: list[Crian\u00e7a | None] = []\n\n    def fila(self,crian\u00e7a: Crian\u00e7a):\n        self.espera.insert(0,crian\u00e7a)\n\n    def entrar(self):\n        if not self.espera:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n            crian\u00e7a = self.espera.pop()\n            self.pulapula.insert(0,crian\u00e7a) \n\n    def sair(self):\n        if not self.pulapula:\n            return \n        crian\u00e7a = self.pulapula.pop()\n        self.espera.insert(0,crian\u00e7a)\n\n    def remover(self, nome: str):\n        for i, crian\u00e7a in enumerate (self.espera):\n            if crian\u00e7a.getNome() == nome:\n                del self.espera[i]\n                return\n            \n        for i, crian\u00e7a in enumerate (self.pulapula):\n            if crian\u00e7a.getNome() == nome:\n                del self.pulapula[i]\n                return\n\n    def __str__(self):\n        espera = \", \".join(str(x) for x in self.espera)\n        pulapula = \", \".join(str(x) for x in self.pulapula)\n        return f\"[{espera}] => [{pulapula}]\"\n\ndef main():\n    pula_pula = Pulapula ()\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(pula_pula)\n        elif args[0] == \"arrive\":\n            nome = args[1]\n            idade = int(args[2])\n            pula_pula.fila(Crian\u00e7a(nome,idade))\n        elif args[0] == \"enter\":\n            pula_pula.entrar()\n        elif args[0] == \"leave\":\n            pula_pula.sair()\n        elif args[0] == \"remove\":\n            nome = args[1]\n            pula_pula.remover(nome)\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\n\nif __name__ == \"__main__\":\n    main()",
+            "content": "@@ -1258,152 +1258,9 @@\n     \n-for i, crian%C3%A7a in enumerate (self.espera):%0A            if crian%C3%A7a.getNome() is not nome:%0A                return f%22fail: %7Bnome%7D nao esta na fila%22\n+ \n    %0A\n@@ -1395,26 +1395,8 @@\n %5Bi%5D%0A\n-            else:%0A\n     \n@@ -1417,46 +1417,8 @@\n turn\n- f%22fail: %7Bnome%7D nao esta no pula pula%22\n %0A%0A  \n",
             "lines": "82"
+        },
+        {
+            "label": "2025-11-15_14-15-50",
+            "content": "@@ -1550,60 +1550,11 @@\n     \n-    return%0A            if crian%C3%A7a.getNome is not nom\n+els\n e:%0A \n",
+            "lines": "85"
+        },
+        {
+            "label": "2025-11-15_14-16-58",
+            "content": "@@ -1254,16 +1254,160 @@\n         \n+for i, crian%C3%A7a in enumerate (self.espera):%0A            if crian%C3%A7a.getNome() is not nome:%0A                return f%22fail: %7Bnome%7D nao esta na fila%22\n    %0A    \n@@ -1549,32 +1549,84 @@\n          return%0A\n+            if crian%C3%A7a.getNome is not nome:%0A        \n         return f\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-15_14-19-25",
+            "content": "@@ -1417,21 +1417,8 @@\n urn%0A\n-            %0A\n     \n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-15_14-20-25",
+            "content": "@@ -1438,15 +1438,15 @@\n     \n-print (\n+return \n f%22fa\n@@ -1478,17 +1478,16 @@\n la pula%22\n-)\n %0A%0A    de\n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-11-15_14-27-32",
+            "content": "@@ -1476,9 +1476,9 @@\n pula\n--\n+ \n pula\n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-11-15_14-27-53",
+            "content": "#Inserir crian\u00e7as na fila de espera do pula pula\n#Mover a primeira crian\u00e7a da fila de espera do pula pula para dentro do pula pula.\n#Mover a primeira crian\u00e7a que entrou no pula pula para o final da fila de espera.\n\n\nclass Crian\u00e7a:\n    def __init__(self,nome:str,idade:int):\n        self.__nome = nome\n        self.__idade = idade\n    def getNome(self):\n        return self.__nome\n    def getIdade(self):\n        return self.__idade\n    def __str__(self):\n        return f\"{self.__nome}:{self.__idade}\"\n\nclass Pulapula:\n    def __init__(self):\n        self.espera: list[Crian\u00e7a] = []\n        self.pulapula: list[Crian\u00e7a | None] = []\n\n    def fila(self,crian\u00e7a: Crian\u00e7a):\n        self.espera.insert(0,crian\u00e7a)\n\n    def entrar(self):\n        if not self.espera:\n            print(\"fail: ninguem na fila\")\n            return\n        else:\n            crian\u00e7a = self.espera.pop()\n            self.pulapula.insert(0,crian\u00e7a) \n\n    def sair(self):\n        if not self.pulapula:\n            return \n        crian\u00e7a = self.pulapula.pop()\n        self.espera.insert(0,crian\u00e7a)\n\n    def remover(self, nome: str):\n        for i, crian\u00e7a in enumerate (self.espera):\n            if crian\u00e7a.getNome() == nome:\n                del self.espera[i]\n                return\n           \n        for i, crian\u00e7a in enumerate (self.pulapula):\n            if crian\u00e7a.getNome() == nome:\n                del self.pulapula[i]\n                return\n            \n        print (f\"fail: {nome} nao esta no pula-pula\")\n\n    def __str__(self):\n        espera = \", \".join(str(x) for x in self.espera)\n        pulapula = \", \".join(str(x) for x in self.pulapula)\n        return f\"[{espera}] => [{pulapula}]\"\n\ndef main():\n    pula_pula = Pulapula ()\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(pula_pula)\n        elif args[0] == \"arrive\":\n            nome = args[1]\n            idade = int(args[2])\n            pula_pula.fila(Crian\u00e7a(nome,idade))\n        elif args[0] == \"enter\":\n            pula_pula.entrar()\n        elif args[0] == \"leave\":\n            pula_pula.sair()\n        elif args[0] == \"remove\":\n            nome = args[1]\n            pula_pula.remover(nome)\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "84"
         }
     ]
 }

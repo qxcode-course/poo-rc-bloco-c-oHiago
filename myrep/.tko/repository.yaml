@@ -12,7 +12,7 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-14 20:24:21'
+  cache_timestamp: '2025-11-15 15:14:40'
   filters:
   - listas
 expanded:
@@ -20,7 +20,7 @@ expanded:
 - poo@bloco_c-listas
 tasks:
   poo@budega: '{rate:90}'
-  poo@pula-pula: '{rate:90}'
+  poo@pula-pula: '{rate:100}'
 flags:
   quests: 0
   tracks: 0
@@ -28,4 +28,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@pula-pula
+selected: poo@budega
