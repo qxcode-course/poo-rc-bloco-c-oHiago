@@ -51,18 +51,16 @@ class Lapiseira:
             return
         self.bico = self.tambor.pop(0)
         
-             
-
      def remover(self) -> Grafite | None: 
-        if self.tambor is not None:
-            return None
-        aux = self.bico
+        if self.bico is None:
+            return
+        remove = self.bico
         self.bico = None
-        return aux
+        return remove
          
      def escrever(self):
         if self.bico == None:
-            print("fail: nao existe grafite")
+            print("fail: nao existe grafite no bico")
             return
         if self.bico.get_size() <= 10:
             print("fail: tamanho insuficiente")
@@ -106,7 +104,7 @@ def main ():
         elif args[0] == "pull":
             lapiseira.puxar()   
         elif args[0] == "remove":
-            grafite = lapiseira.remover()
+            lapiseira.remover()
         elif args[0] == "write":
             lapiseira.escrever()
 

@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-17_13-40-20",
+            "content": "@@ -586,43 +586,4 @@\n 1%5D))\n-%0A%0Aif __name__ == %22__main__%22:%0A    main()\n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-11-17_13-41-15",
+            "content": "@@ -210,16 +210,8 @@\n self\n-,qtd:int\n ):%0A \n@@ -254,19 +254,9 @@\n  = %5B\n-None%5D * qtd\n+%5D\n %0A%0A  \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-17_13-43-18",
+            "content": "@@ -225,21 +225,16 @@\n         \n-self.\n cadeiras\n@@ -275,138 +275,8 @@\n td%0A%0A\n-    def __str__(self):%0A        cadeiras = %22, %22.join(%5Bstr(x)%5D if x else %22-%22 for x in self.cadeiras)%0A        return f%22%5B%7Bcadeiras%7D%5D%22%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-17_13-48-54",
+            "content": "@@ -442,17 +442,18 @@\n nema\n-:\n+ =\n  Theater\n  %7C N\n@@ -452,22 +452,10 @@\n ater\n- %7C None = None\n+()\n %0A%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_13-49-31",
+            "content": "@@ -263,16 +263,20 @@\n one%5D = %5B\n+None\n %5D * qtd%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_13-49-52",
+            "content": "@@ -451,16 +451,22 @@\n  %7C None \n+= None\n %0A%0A    wh\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_13-50-07",
+            "content": "@@ -455,14 +455,8 @@\n one \n-= None\n %0A%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_13-50-17",
+            "content": "@@ -426,34 +426,33 @@\n %0A    %0A    cinema\n- =\n+:\n  Theater (0)%0A%0A  \n@@ -448,11 +448,21 @@\n ter \n-(0)\n+%7C None = None\n %0A%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-17_13-56-06",
+            "content": "class Client:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def __str__(self):\n        return f\"{self.id},{self.phone}\"\n    \nclass Theater:\n    def __init__(self,qtd:int):\n        self.cadeiras: list[Client | None] = [] * qtd\n\n    def __str__(self):\n        cadeiras = \", \".join([str(x)] if x else \"-\" for x in self.cadeiras)\n        return f\"[{cadeiras}]\"\n    \ndef main():\n    \n    cinema = Theater (0)\n\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args:list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        if args[0] == \"show\":\n            print(cinema)\n        if args[0] == \"init\":\n            cinema = Theater (int(args[1]))\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "34"
+        }
+    ]
+}
