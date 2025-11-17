@@ -7,11 +7,24 @@ class Client:
         return f"{self.id},{self.phone}"
     
 class Theater:
-    def __init__(self,qtd:int):
-        self.cadeiras: list[Client | None] = [] * qtd
+    def __init__(self,n_cadeiras:int):
+        self.cadeiras: list[Client | None] = []
+
+        for _ in range (n_cadeiras):
+            self.cadeiras.append(None)
+    
+    def reserve (self, id: str, phone: int, index: int):
+        if index < 0 or index >= len(self.cadeiras):
+            print("fail: index invalido")
+            return
+        if self.cadeiras[index] is not None:
+            print("fail: cadeira ocupada")
+            return
+        
+        self.cadeiras[index] = Client(id,phone)
 
     def __str__(self):
-        cadeiras = ", ".join([str(x)] if x else "-" for x in self.cadeiras)
+        cadeiras = " ".join([str(x)] if x else "-" for x in self.cadeiras)
         return f"[{cadeiras}]"
     
 def main():
@@ -28,7 +41,13 @@ def main():
         if args[0] == "show":
             print(cinema)
         if args[0] == "init":
-            cinema = Theater (int(args[1]))
+            n_cadeiras = int(args[1])
+            cinema = Theater (n_cadeiras)
+        if args[0] == "reserve":
+            id = args[1]
+            phone = int(args[2])
+            index = int(args[3])
+            cinema.reserve(id, phone, index)
 
 if __name__ == "__main__":
     main()

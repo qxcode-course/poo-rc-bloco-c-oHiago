@@ -42,8 +42,38 @@
         },
         {
             "label": "2025-11-17_13-56-06",
-            "content": "class Client:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def __str__(self):\n        return f\"{self.id},{self.phone}\"\n    \nclass Theater:\n    def __init__(self,qtd:int):\n        self.cadeiras: list[Client | None] = [] * qtd\n\n    def __str__(self):\n        cadeiras = \", \".join([str(x)] if x else \"-\" for x in self.cadeiras)\n        return f\"[{cadeiras}]\"\n    \ndef main():\n    \n    cinema = Theater (0)\n\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args:list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        if args[0] == \"show\":\n            print(cinema)\n        if args[0] == \"init\":\n            cinema = Theater (int(args[1]))\n\nif __name__ == \"__main__\":\n    main()",
+            "content": "@@ -207,26 +207,19 @@\n __(self,\n-n_cadeiras\n+qtd\n :int):%0A \n@@ -268,85 +268,14 @@\n = %5B%5D\n-%0A%0A        for _ in range (n_cadeiras):%0A            self.cadeiras.append(None)\n+ * qtd\n %0A%0A  \n@@ -694,46 +694,8 @@\n t%22:%0A\n-            n_cadeiras = int(args%5B1%5D)%0A\n     \n@@ -724,18 +724,20 @@\n er (\n-n_cadeiras\n+int(args%5B1%5D)\n )%0A%0Ai\n",
             "lines": "34"
+        },
+        {
+            "label": "2025-11-17_15-30-56",
+            "content": "@@ -393,16 +393,17 @@\n iras = %22\n+,\n  %22.join(\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-17_15-31-14",
+            "content": "@@ -352,329 +352,8 @@\n one)\n-%0A    %0A    def reserve (self, id: str, phone: int, index: int):%0A        if index %3C 0 or index %3E= len(self.cadeiras):%0A            print(%22fail: index invalido%22)%0A            return%0A        if self.cadeiras%5Bindex%5D is not None:%0A            print(%22fail: cadeira ocupada%22)%0A        %0A        self.cadeiras%5Bindex%5D = Client(id,phone)\n %0A%0A  \n@@ -850,108 +850,8 @@\n ras)\n-%0A        if args%5B0%5D == %22reserve%22:%0A            index = int(args%5B1%5D)%0A            cinema.reserve(index)\n %0A%0Aif\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-17_15-48-45",
+            "content": "@@ -613,35 +613,16 @@\n upada%22)%0A\n-            return%0A\n         \n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-11-17_15-57-03",
+            "content": "@@ -1224,68 +1224,8 @@\n e%22:%0A\n-            id = (args%5B1%5D)%0A            phone = int(args%5B2%5D)%0A\n     \n@@ -1253,9 +1253,9 @@\n rgs%5B\n-3\n+1\n %5D)%0A \n@@ -1284,19 +1284,8 @@\n rve(\n-id, phone, \n inde\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-11-17_16-03-42",
+            "content": "@@ -1237,23 +1237,25 @@\n    id = \n+(\n args%5B1%5D\n+)\n %0A       \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-17_16-04-09",
+            "content": "class Client:\n    def __init__(self, id: str, phone: int):\n        self.id = id\n        self.phone = phone\n\n    def __str__(self):\n        return f\"{self.id},{self.phone}\"\n    \nclass Theater:\n    def __init__(self,n_cadeiras:int):\n        self.cadeiras: list[Client | None] = []\n\n        for _ in range (n_cadeiras):\n            self.cadeiras.append(None)\n    \n    def reserve (self, id: str, phone: int, index: int):\n        if index < 0 or index >= len(self.cadeiras):\n            print(\"fail: index invalido\")\n            return\n        if self.cadeiras[index] is not None:\n            print(\"fail: cadeira ocupada\")\n            return\n        \n        self.cadeiras[index] = Client(id,phone)\n\n    def __str__(self):\n        cadeiras = \" \".join([str(x)] if x else \"-\" for x in self.cadeiras)\n        return f\"[{cadeiras}]\"\n    \ndef main():\n    \n    cinema = Theater (0)\n\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args:list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        if args[0] == \"show\":\n            print(cinema)\n        if args[0] == \"init\":\n            n_cadeiras = int(args[1])\n            cinema = Theater (n_cadeiras)\n        if args[0] == \"reserve\":\n            id = args[1]\n            phone = int(args[2])\n            index = int(args[3])\n            cinema.reserve(id, phone, index)\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "53"
         }
     ]
 }
