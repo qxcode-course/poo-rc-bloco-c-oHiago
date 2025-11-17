@@ -4,7 +4,7 @@ class Client:
         self.phone = phone
 
     def __str__(self):
-        return f"{self.id},{self.phone}"
+        return f"{self.id}:{self.phone}"
     
 class Theater:
     def __init__(self,n_cadeiras:int):
@@ -15,16 +15,20 @@ class Theater:
     
     def reserve (self, id: str, phone: int, index: int):
         if index < 0 or index >= len(self.cadeiras):
-            print("fail: index invalido")
+            print("fail: cadeira nao existe")
             return
         if self.cadeiras[index] is not None:
-            print("fail: cadeira ocupada")
+            print("fail: cadeira ja esta ocupada")
             return
+        for cliente in self.cadeiras:
+            if cliente is not None and cliente.id == id:
+                print("fail: cliente ja esta no cinema")
+                return
         
         self.cadeiras[index] = Client(id,phone)
 
     def __str__(self):
-        cadeiras = " ".join([str(x)] if x else "-" for x in self.cadeiras)
+        cadeiras = " ".join(str(x) if x else "-" for x in self.cadeiras)
         return f"[{cadeiras}]"
     
 def main():
@@ -38,12 +42,12 @@ def main():
 
         if args[0] == "end":
             break
-        if args[0] == "show":
+        elif args[0] == "show":
             print(cinema)
-        if args[0] == "init":
+        elif args[0] == "init":
             n_cadeiras = int(args[1])
             cinema = Theater (n_cadeiras)
-        if args[0] == "reserve":
+        elif args[0] == "reserve":
             id = args[1]
             phone = int(args[2])
             index = int(args[3])
