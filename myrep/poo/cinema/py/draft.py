@@ -27,6 +27,14 @@ class Theater:
         
         self.cadeiras[index] = Client(id,phone)
 
+    def cancel (self, nome: str):
+        for i, cliente in enumerate (self.cadeiras):
+            if cliente is not None and cliente.id == nome:
+                self.cadeiras[i] = None 
+                return     
+        print ("fail: cliente nao esta no cinema")
+
+
     def __str__(self):
         cadeiras = " ".join(str(x) if x else "-" for x in self.cadeiras)
         return f"[{cadeiras}]"
@@ -52,6 +60,9 @@ def main():
             phone = int(args[2])
             index = int(args[3])
             cinema.reserve(id, phone, index)
+        elif args[0] == "cancel":
+            nome = args[1]
+            cinema.cancel(nome)
 
 if __name__ == "__main__":
     main()
