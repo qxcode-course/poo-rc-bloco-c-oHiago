@@ -222,8 +222,83 @@
         },
         {
             "label": "2025-11-12_15-39-52",
-            "content": "class Foo:\n    def __init__(self, x:int):\n        self.x = x\n    def __str__(self):\n        return f\"Foo:({self.x})\"\nclass Listas:\n    def __init__(self):\n        self.lista_vazia: list[int] = [] \n        self.lista_nums: list[int] = [1,2,3,4,5] \n        self.lista_nums.append(7)\n        self.lista_foo: list[Foo] = [] \n    \n    y = list(range(4,10))\n    print(y)\n\ndef main():\n    lista = Listas()\n    \n    print(lista.lista_vazia)\n    print(lista.lista_foo)\n    lista.lista_nums.append(10)  \n    lista.lista_nums.insert(0,0)  \n    lista.lista_nums.remove(4) \n    lista.lista_nums.pop(1) \n    lista.lista_nums.pop(5)\n    separador = '-'\n    frase = separador.join(map(str, lista.lista_nums))\n    print(frase)\n    print(lista.lista_nums)\n    tamanho = len(lista.lista_nums) \n\n    print(tamanho)\n\nmain()\n",
+            "content": "@@ -193,20 +193,8 @@\n  %5B%5D \n-#array vazio\n %0A   \n@@ -243,34 +243,8 @@\n ,5%5D \n-#Criar um array preenchido\n %0A   \n@@ -489,117 +489,42 @@\n 10) \n-#Adicionar e remover elementos ao final %0A    lista.lista_nums.insert(0,0) #adiciona elemento no indice citado\n+ %0A    lista.lista_nums.insert(0,0)\n   %0A \n@@ -557,26 +557,8 @@\n (4) \n-#remove elemento  \n %0A   \n@@ -586,30 +586,8 @@\n (1) \n- #adiciona um elemento\n %0A   \n@@ -614,38 +614,8 @@\n p(5)\n- %0A    lista.lista_nums.pop(25)\n %0A   \n@@ -731,16 +731,16 @@\n a_nums)%0A\n+\n     tama\n@@ -771,33 +771,8 @@\n ms) \n-#Obter o tamanho do array\n %0A%0A  \n",
             "lines": "34"
+        },
+        {
+            "label": "2025-11-18_07-42-09",
+            "content": "@@ -791,16 +791,17 @@\n ms.pop(2\n+5\n )%0A    se\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-18_07-42-27",
+            "content": "@@ -769,17 +769,16 @@\n 5) %0A    \n-#\n lista.li\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-18_07-42-47",
+            "content": "@@ -765,24 +765,25 @@\n pop(5) %0A    \n+#\n lista.lista_\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-18_07-42-56",
+            "content": "@@ -769,17 +769,16 @@\n 5) %0A    \n-#\n lista.li\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-18_07-43-08",
+            "content": "@@ -765,24 +765,25 @@\n pop(5) %0A    \n+#\n lista.lista_\n@@ -795,9 +795,9 @@\n pop(\n-8\n+2\n )%0A  \n@@ -872,60 +872,8 @@\n ms))\n- #Fazer impress%C3%A3o formatada utilizando o m%C3%A9todo join\n %0A   \n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-18_09-58-08",
+            "content": "@@ -765,16 +765,44 @@\n pop(5) %0A\n+    lista.lista_nums.pop(8)%0A\n     sepa\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-18_09-58-21",
+            "content": "@@ -357,20 +357,16 @@\n %5D %0A    %0A\n-    \n     y = \n@@ -383,20 +383,16 @@\n (4,10))%0A\n-    \n     prin\n@@ -719,35 +719,28 @@\n )  #\n-remove elemento e o retorna\n+adiciona um elemento\n %0A   \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-18_15-30-38",
+            "content": "@@ -380,17 +380,17 @@\n t(range(\n-0\n+4\n ,10))%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-18_15-30-56",
+            "content": "@@ -409,95 +409,8 @@\n y)%0A%0A\n-        import random%0A        random_list = %5Brandom.randint(0,99) for _ in range(10)%5D%0A%0A\n def \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-18_15-32-18",
+            "content": "@@ -1,19 +1,4 @@\n-import random%0A%0A\n clas\n@@ -190,25 +190,16 @@\n %5D = %5B%5D #\n-Criar um \n array va\n@@ -281,25 +281,8 @@\n hido\n- (tipo primitivo)\n %0A   \n@@ -301,77 +301,21 @@\n sta_\n-foo: list%5BFoo%5D = Foo(1), Foo(2)#Criar um array preenchido (classe Foo\n+nums.append(7\n )%0A  \n@@ -324,17 +324,8 @@\n     \n-for f in \n self\n@@ -339,38 +339,24 @@\n foo:\n-%0A            print(f)%0A       %0A\n+ list%5BFoo%5D = %5B%5D \n %0A   \n@@ -387,16 +387,55 @@\n (0,10))%0A\n+        print(y)%0A%0A        import random\n %0A       \n@@ -439,20 +439,19 @@\n     \n-lista_\n random\n+_list\n  = %5B\n@@ -594,186 +594,35 @@\n     \n-#Adicionar e remover elementos ao final%0A    lista.lista_nums.append(10) %0A    print(lista.lista_nums) %0A    lista.lista_nums.pop() #remove elemento%0A    print(lista.lista_nums) %0A   \n+lista.lista_nums.append(10)\n  #Ad\n@@ -653,17 +653,17 @@\n tos \n-n\n+a\n o \n+f\n in\n-icio\n+al \n %0A   \n@@ -693,123 +693,87 @@\n t(0,\n-5) %0A    print(lista.lista_nums)%0A    lista.lista_nums.remove(0)%0A    print(lista.lista_nums)%0A    #Adicionar e \n+0) #adiciona elemento no indice citado  %0A    lista.lista_nums.remove(4) #\n remove\n-r\n  ele\n@@ -781,245 +781,97 @@\n ento\n-s em uma posi%C3%A7%C3%A3o espec%C3%ADfica%0A    lista.lista_nums.insert(4,10) %0A    print(lista.lista_nums)%0A    lista.lista_nums.pop(4)%0A    print(lista.lista_nums)%0A%0A    %0A    lista.lista_nums.pop(5) %0A   # Fazer impress%C3%A3o formatada utilizando o m%C3%A9todo join\n+  %0A    lista.lista_nums.pop(1)  #remove elemento e o retorna%0A    lista.lista_nums.pop(5) \n %0A   \n@@ -945,29 +945,8 @@\n ms))\n-%0A    print(frase)%0A   \n  #Fa\n@@ -1002,59 +1002,20 @@\n     \n-sequencia = list(range(0,10))%0A    print(sequencia)%0A\n+print(frase)\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-18_17-27-47",
+            "content": "@@ -472,16 +472,118 @@\n       %0A%0A\n+    %0A        y = list(range(0,10))%0A%0A        lista_random = %5Brandom.randint(0,99) for _ in range(10)%5D%0A%0A\n def main\n@@ -1375,16 +1375,127 @@\n t(frase)\n+%0A    #Fazer impress%C3%A3o formatada utilizando o m%C3%A9todo join%0A    sequencia = list(range(0,10))%0A    print(sequencia)\n %0A%0A    pr\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-11-18_17-28-30",
+            "content": "@@ -1278,31 +1278,8 @@\n se)%0A\n-#Obter tamanho do array\n %0A   \n@@ -1365,16 +1365,17 @@\n o array%0A\n+%0A\n     prin\n@@ -1388,809 +1388,8 @@\n nho)\n-%0A    # Criar um array com elementos em sequ%C3%AAncia de zero a n%0A    sequencia = list(range(0,5))%0A    print(sequencia)%0A    #Criar um array com valores aleat%C3%B3rios%0A    aleatorio = %5Brandom.randint(1,500) for _ in range(5)%5D%0A    print(aleatorio)%0A    #Acessar elementos por %C3%ADndice%0A    numero_1 = lista.lista_nums%5B0%5D%0A    print(numero_1)%0A    numero_2 = lista.lista_nums%5B1%5D%0A    print(numero_2)%0A    ultimo_numero = lista.lista_nums%5B-1%5D%0A    print(ultimo_numero)%0A    #Percorrer os elementos utilizando for-range%0A    for i in range(5):%0A        print(i)%0A    #Percorrer os elementos utilizando for indexado%0A    lista_cor = %5B'azul', 'amarelo', 'verde'%5D%0A    tamanho_lista = len(lista_cor)%0A%0A    for y in range(tamanho_lista):%0A        cor = lista_cor%5By%5D%0A        print(%7By%7D,%7Bcor%7D)%0A%0A    #Procurar um elemento X usando la%C3%A7o%0A    \n %0A%0Ama\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-11-18_17-45-24",
+            "content": "@@ -355,17 +355,16 @@\n %5BFoo%5D = \n-%5B\n Foo(1), \n@@ -369,17 +369,16 @@\n , Foo(2)\n-%5D\n #Criar u\n@@ -873,19 +873,22 @@\n ta_nums.\n-pop\n+remove\n (0)%0A    \n@@ -1086,24 +1086,59 @@\n .lista_nums)\n+%0A%0A    %0A    lista.lista_nums.pop(5) \n %0A   # Fazer \n@@ -2203,16 +2203,20 @@\n do la%C3%A7o%0A\n+    \n %0A%0Amain()\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-18_17-49-54",
+            "content": "@@ -537,24 +537,51 @@\n ista_vazia)%0A\n+    print(lista.lista_foo)%0A\n     #Adicion\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-18_17-50-45",
+            "content": "import random\n\nclass Foo:\n    def __init__(self, x:int):\n        self.x = x\n    def __str__(self):\n        return f\"Foo:({self.x})\"\nclass Listas:\n    def __init__(self):\n        self.lista_vazia: list[int] = [] #Criar um array vazio\n        self.lista_nums: list[int] = [1,2,3,4,5] #Criar um array preenchido (tipo primitivo)\n        self.lista_foo: list[Foo] = [Foo(1), Foo(2)]#Criar um array preenchido (classe Foo)\n        for f in self.lista_foo:\n            print(f)\n       \n\ndef main():\n    lista = Listas()\n    \n    print(lista.lista_vazia)\n    #Adicionar e remover elementos ao final\n    lista.lista_nums.append(10) \n    print(lista.lista_nums) \n    lista.lista_nums.pop() #remove elemento\n    print(lista.lista_nums) \n    #Adicionar e remover elementos no inicio\n    lista.lista_nums.insert(0,5) \n    print(lista.lista_nums)\n    lista.lista_nums.pop(0)\n    print(lista.lista_nums)\n    #Adicionar e remover elementos em uma posi\u00e7\u00e3o espec\u00edfica\n    lista.lista_nums.insert(4,10) \n    print(lista.lista_nums)\n    lista.lista_nums.pop(4)\n    print(lista.lista_nums)\n   # Fazer impress\u00e3o formatada utilizando o m\u00e9todo join\n    separador = '-'\n    frase = separador.join(map(str, lista.lista_nums))\n    print(frase)\n#Obter tamanho do array\n    print(lista.lista_nums)\n    tamanho = len(lista.lista_nums) #Obter o tamanho do array\n    print(tamanho)\n    # Criar um array com elementos em sequ\u00eancia de zero a n\n    sequencia = list(range(0,5))\n    print(sequencia)\n    #Criar um array com valores aleat\u00f3rios\n    aleatorio = [random.randint(1,500) for _ in range(5)]\n    print(aleatorio)\n    #Acessar elementos por \u00edndice\n    numero_1 = lista.lista_nums[0]\n    print(numero_1)\n    numero_2 = lista.lista_nums[1]\n    print(numero_2)\n    ultimo_numero = lista.lista_nums[-1]\n    print(ultimo_numero)\n    #Percorrer os elementos utilizando for-range\n    for i in range(5):\n        print(i)\n    #Percorrer os elementos utilizando for indexado\n    lista_cor = ['azul', 'amarelo', 'verde']\n    tamanho_lista = len(lista_cor)\n\n    for y in range(tamanho_lista):\n        cor = lista_cor[y]\n        print({y},{cor})\n\n    #Procurar um elemento X usando la\u00e7o\n\n\nmain()\n",
+            "lines": "71"
         }
     ]
 }

@@ -32,7 +32,7 @@ class Mercantil:
 
     def finalizar(self, index: int) -> Pessoa | None:
         if index < 0 or index >= len(self.caixas):
-            print("fail: index invalido")
+            print("fail: caixa inexistente")
             return None
         if self.caixas[index] is None:
             print("fail: caixa vazio")
