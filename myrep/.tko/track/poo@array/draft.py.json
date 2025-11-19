@@ -297,8 +297,88 @@
         },
         {
             "label": "2025-11-18_17-50-45",
-            "content": "import random\n\nclass Foo:\n    def __init__(self, x:int):\n        self.x = x\n    def __str__(self):\n        return f\"Foo:({self.x})\"\nclass Listas:\n    def __init__(self):\n        self.lista_vazia: list[int] = [] #Criar um array vazio\n        self.lista_nums: list[int] = [1,2,3,4,5] #Criar um array preenchido (tipo primitivo)\n        self.lista_foo: list[Foo] = [Foo(1), Foo(2)]#Criar um array preenchido (classe Foo)\n        for f in self.lista_foo:\n            print(f)\n       \n\ndef main():\n    lista = Listas()\n    \n    print(lista.lista_vazia)\n    #Adicionar e remover elementos ao final\n    lista.lista_nums.append(10) \n    print(lista.lista_nums) \n    lista.lista_nums.pop() #remove elemento\n    print(lista.lista_nums) \n    #Adicionar e remover elementos no inicio\n    lista.lista_nums.insert(0,5) \n    print(lista.lista_nums)\n    lista.lista_nums.pop(0)\n    print(lista.lista_nums)\n    #Adicionar e remover elementos em uma posi\u00e7\u00e3o espec\u00edfica\n    lista.lista_nums.insert(4,10) \n    print(lista.lista_nums)\n    lista.lista_nums.pop(4)\n    print(lista.lista_nums)\n   # Fazer impress\u00e3o formatada utilizando o m\u00e9todo join\n    separador = '-'\n    frase = separador.join(map(str, lista.lista_nums))\n    print(frase)\n#Obter tamanho do array\n    print(lista.lista_nums)\n    tamanho = len(lista.lista_nums) #Obter o tamanho do array\n    print(tamanho)\n    # Criar um array com elementos em sequ\u00eancia de zero a n\n    sequencia = list(range(0,5))\n    print(sequencia)\n    #Criar um array com valores aleat\u00f3rios\n    aleatorio = [random.randint(1,500) for _ in range(5)]\n    print(aleatorio)\n    #Acessar elementos por \u00edndice\n    numero_1 = lista.lista_nums[0]\n    print(numero_1)\n    numero_2 = lista.lista_nums[1]\n    print(numero_2)\n    ultimo_numero = lista.lista_nums[-1]\n    print(ultimo_numero)\n    #Percorrer os elementos utilizando for-range\n    for i in range(5):\n        print(i)\n    #Percorrer os elementos utilizando for indexado\n    lista_cor = ['azul', 'amarelo', 'verde']\n    tamanho_lista = len(lista_cor)\n\n    for y in range(tamanho_lista):\n        cor = lista_cor[y]\n        print({y},{cor})\n\n    #Procurar um elemento X usando la\u00e7o\n\n\nmain()\n",
+            "content": "@@ -2144,218 +2144,8 @@\n a%C3%A7o%0A\n-    z = 4 %0A    achou = False   %0A    for i, elemento in enumerate(lista):%0A        if elemento == z:%0A            print(f%22%7Bz%7D%22)%0A            achou = True%0A            break%0A        if not achou:%0A            return%0A%0A\n %0A%0Ama\n",
             "lines": "71"
+        },
+        {
+            "label": "2025-11-18_22-02-35",
+            "content": "@@ -2266,15 +2266,8 @@\n %22%7Bz%7D\n- em %7Bi%7D\n %22)%0A \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-18_22-02-56",
+            "content": "@@ -2315,16 +2315,20 @@\n   break%0A\n+    \n     if n\n@@ -2337,16 +2337,20 @@\n  achou:%0A\n+    \n         \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-18_22-03-17",
+            "content": "@@ -2210,27 +2210,16 @@\n te(lista\n-.lista_nums\n ):%0A     \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-18_22-15-09",
+            "content": "@@ -2278,17 +2278,10 @@\n %7Bz%7D \n-no indic\n e\n+m\n  %7Bi%7D\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-18_22-15-33",
+            "content": "@@ -2370,226 +2370,8 @@\n urn%0A\n-    #Procurar um elemento X usando fun%C3%A7%C3%A3o nativa%0A    elemento_1 = 5%0A    if elemento_1 in lista.lista_nums:%0A        print(f%22%7Belemento_1%7D esta na lista%22)%0A    else:%0A        print(f%22%7Belemento_1%7D n esta na lista%22)%0A        %0A\n %0A%0A%0Am\n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-18_22-19-24",
+            "content": "@@ -2579,170 +2579,16 @@\n a%22)%0A\n-%0A    elemento_1 = 11%0A    if elemento_1 in lista.lista_nums:%0A        print(f%22%7Belemento_1%7D esta na lista%22)%0A    else:%0A        print(f%22%7Belemento_1%7D n esta na lista%22)%0A\n+        \n %0A%0A%0A%0A\n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-11-18_22-19-49",
+            "content": "@@ -2742,188 +2742,8 @@\n %22)%0A%0A\n-#Criar um novo array com elementos filtrados, por exemplo, pares%0A    def pares(p):%0A        return p%252==0%0A    %0A    filtro = list(filter(pares, lista.lista_nums))%0A    print(filtro)%0A%0A\n %0A%0A%0Am\n",
+            "lines": "94"
+        },
+        {
+            "label": "2025-11-18_22-22-21",
+            "content": "@@ -2922,204 +2922,8 @@\n o)%0A%0A\n-#Criar um novo array com elementos transformados, por exemplo, ao quadrado%0A    ao_quadrado = %5Blista.lista_nums * lista.lista_nums for lista.lista_nums in lista.lista_nums%5D%0A    print(ao_quadrado)%0A%0A\n %0A%0A%0Am\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-18_22-24-55",
+            "content": "@@ -3117,125 +3117,8 @@\n do)%0A\n-    #Buscar e remover um elemento X%0A    X = 4%0A    if X in lista.lista_nums:%0A        lista.lista_nums.remove(X)%0A%0A    %0A\n %0A%0A%0A%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2025-11-18_22-31-00",
+            "content": "@@ -1858,37 +1858,17 @@\n n range(\n-len(lista.lista_nums)\n+5\n ):%0A     \n@@ -2092,13 +2092,17 @@\n int(\n-y,\n+%7By%7D,%7B\n cor\n+%7D\n )%0A%0A \n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-18_22-33-17",
+            "content": "@@ -3169,17 +3169,17 @@\n o X%0A    \n-R\n+X\n  = 4%0A   \n@@ -3182,17 +3182,17 @@\n %0A    if \n-R\n+X\n  in list\n@@ -3241,9 +3241,9 @@\n ove(\n-R\n+X\n )%0A%0A \n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-18_22-34-07",
+            "content": "@@ -3243,569 +3243,8 @@\n e(R)\n-%0A    %0A    #Remover todos os elementos com valor X da lista%0A    num = 2%0A    lista.lista_nums = %5Bn for n in lista.lista_numsn if n != num%5D%0A%0A#Verificar quais fun%C3%A7%C3%B5es existem nativamente na linguagem%0A  #busca%0A    print(5 in lista.lista_nums)%0A    print(lista.lista_nums.index(5))%0A    print(lista.lista_nums.count(5))%0A  #remo%C3%A7%C3%A3o%0A    del lista.lista_nums%5B2%5D%0A    lista.lista_nums.remove(2)%0A    remocao = lista.lista_nums.pop(0)%0A    %0A  #ordena%C3%A7%C3%A3o%0A    ordenacao = sorted(lista.lista_nums)%0A    lista.lista_nums.sort()%0A  #embaralhamento%0A    random.shuffle(lista.lista_nums)\n %0A%0A  \n",
+            "lines": "111"
+        },
+        {
+            "label": "2025-11-18_22-44-02",
+            "content": "@@ -3361,16 +3361,17 @@\n sta_nums\n+n\n  if n !=\n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-11-18_22-46-59",
+            "content": "@@ -3032,19 +3032,64 @@\n  = %5B\n-n * n for n\n+lista.lista_nums * lista.lista_nums for lista.lista_nums\n  in \n@@ -3169,25 +3169,17 @@\n o X%0A    \n-elementoX\n+R\n  = 4%0A   \n@@ -3182,25 +3182,17 @@\n %0A    if \n-elementoX\n+R\n  in list\n@@ -3241,17 +3241,9 @@\n ove(\n-elementoX\n+R\n )%0A  \n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-11-18_22-51-14",
+            "content": "@@ -3596,17 +3596,17 @@\n .remove(\n-3\n+2\n )%0A    re\n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-11-18_22-51-52",
+            "content": "import random\n\nclass Foo:\n    def __init__(self, x:int):\n        self.x = x\n    def __str__(self):\n        return f\"Foo:({self.x})\"\nclass Listas:\n    def __init__(self):\n        self.lista_vazia: list[int] = [] #Criar um array vazio\n        self.lista_nums: list[int] = [1,2,3,4,5] #Criar um array preenchido (tipo primitivo)\n        self.lista_foo: list[Foo] = [Foo(1), Foo(2)]#Criar um array preenchido (classe Foo)\n        for f in self.lista_foo:\n            print(f)\n       \n\ndef main():\n    lista = Listas()\n    \n    print(lista.lista_vazia)\n    #Adicionar e remover elementos ao final\n    lista.lista_nums.append(10) \n    print(lista.lista_nums) \n    lista.lista_nums.pop() #remove elemento\n    print(lista.lista_nums) \n    #Adicionar e remover elementos no inicio\n    lista.lista_nums.insert(0,5) \n    print(lista.lista_nums)\n    lista.lista_nums.pop(0)\n    print(lista.lista_nums)\n    #Adicionar e remover elementos em uma posi\u00e7\u00e3o espec\u00edfica\n    lista.lista_nums.insert(4,10) \n    print(lista.lista_nums)\n    lista.lista_nums.pop(4)\n    print(lista.lista_nums)\n   # Fazer impress\u00e3o formatada utilizando o m\u00e9todo join\n    separador = '-'\n    frase = separador.join(map(str, lista.lista_nums))\n    print(frase)\n#Obter tamanho do array\n    print(lista.lista_nums)\n    tamanho = len(lista.lista_nums) #Obter o tamanho do array\n    print(tamanho)\n    # Criar um array com elementos em sequ\u00eancia de zero a n\n    sequencia = list(range(0,5))\n    print(sequencia)\n    #Criar um array com valores aleat\u00f3rios\n    aleatorio = [random.randint(1,500) for _ in range(5)]\n    print(aleatorio)\n    #Acessar elementos por \u00edndice\n    numero_1 = lista.lista_nums[0]\n    print(numero_1)\n    numero_2 = lista.lista_nums[1]\n    print(numero_2)\n    ultimo_numero = lista.lista_nums[-1]\n    print(ultimo_numero)\n    #Percorrer os elementos utilizando for-range\n    for i in range(len(lista.lista_nums)):\n        print(i)\n    #Percorrer os elementos utilizando for indexado\n    lista_cor = ['azul', 'amarelo', 'verde']\n    tamanho_lista = len(lista_cor)\n\n    for y in range(tamanho_lista):\n        cor = lista_cor[y]\n        print(y,cor)\n\n    #Procurar um elemento X usando la\u00e7o\n    z = 4 \n    achou = False   \n    for i, elemento in enumerate(lista.lista_nums):\n        if elemento == z:\n            print(f\"{z} no indice {i}\")\n            achou = True\n            break\n    if not achou:\n        return\n    #Procurar um elemento X usando fun\u00e7\u00e3o nativa\n    elemento_1 = 5\n    if elemento_1 in lista.lista_nums:\n        print(f\"{elemento_1} esta na lista\")\n    else:\n        print(f\"{elemento_1} n esta na lista\")\n\n    elemento_1 = 11\n    if elemento_1 in lista.lista_nums:\n        print(f\"{elemento_1} esta na lista\")\n    else:\n        print(f\"{elemento_1} n esta na lista\")\n\n#Criar um novo array com elementos filtrados, por exemplo, pares\n    def pares(p):\n        return p%2==0\n    \n    filtro = list(filter(pares, lista.lista_nums))\n    print(filtro)\n\n#Criar um novo array com elementos transformados, por exemplo, ao quadrado\n    ao_quadrado = [n * n for n in lista.lista_nums]\n    print(ao_quadrado)\n    #Buscar e remover um elemento X\n    elementoX = 4\n    if elementoX in lista.lista_nums:\n        lista.lista_nums.remove(elementoX)\n    \n    #Remover todos os elementos com valor X da lista\n    num = 2\n    lista.lista_nums = [n for n in lista.lista_nums if n != num]\n\n#Verificar quais fun\u00e7\u00f5es existem nativamente na linguagem\n  #busca\n    print(5 in lista.lista_nums)\n    print(lista.lista_nums.index(5))\n    print(lista.lista_nums.count(5))\n  #remo\u00e7\u00e3o\n    del lista.lista_nums[2]\n    lista.lista_nums.remove(3)\n    remocao = lista.lista_nums.pop(0)\n    \n  #ordena\u00e7\u00e3o\n    ordenacao = sorted(lista.lista_nums)\n    lista.lista_nums.sort()\n  #embaralhamento\n    random.shuffle(lista.lista_nums)\n\n    \n\n\n\n\nmain()\n",
+            "lines": "131"
         }
     ]
 }

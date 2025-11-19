@@ -55,7 +55,7 @@ def main():
     ultimo_numero = lista.lista_nums[-1]
     print(ultimo_numero)
     #Percorrer os elementos utilizando for-range
-    for i in range(5):
+    for i in range(len(lista.lista_nums)):
         print(i)
     #Percorrer os elementos utilizando for indexado
     lista_cor = ['azul', 'amarelo', 'verde']
@@ -63,9 +63,69 @@ def main():
 
     for y in range(tamanho_lista):
         cor = lista_cor[y]
-        print({y},{cor})
+        print(y,cor)
 
     #Procurar um elemento X usando laço
+    z = 4 
+    achou = False   
+    for i, elemento in enumerate(lista.lista_nums):
+        if elemento == z:
+            print(f"{z} no indice {i}")
+            achou = True
+            break
+    if not achou:
+        return
+    #Procurar um elemento X usando função nativa
+    elemento_1 = 5
+    if elemento_1 in lista.lista_nums:
+        print(f"{elemento_1} esta na lista")
+    else:
+        print(f"{elemento_1} n esta na lista")
+
+    elemento_1 = 11
+    if elemento_1 in lista.lista_nums:
+        print(f"{elemento_1} esta na lista")
+    else:
+        print(f"{elemento_1} n esta na lista")
+
+#Criar um novo array com elementos filtrados, por exemplo, pares
+    def pares(p):
+        return p%2==0
+    
+    filtro = list(filter(pares, lista.lista_nums))
+    print(filtro)
+
+#Criar um novo array com elementos transformados, por exemplo, ao quadrado
+    ao_quadrado = [n * n for n in lista.lista_nums]
+    print(ao_quadrado)
+    #Buscar e remover um elemento X
+    elementoX = 4
+    if elementoX in lista.lista_nums:
+        lista.lista_nums.remove(elementoX)
+    
+    #Remover todos os elementos com valor X da lista
+    num = 2
+    lista.lista_nums = [n for n in lista.lista_nums if n != num]
+
+#Verificar quais funções existem nativamente na linguagem
+  #busca
+    print(5 in lista.lista_nums)
+    print(lista.lista_nums.index(5))
+    print(lista.lista_nums.count(5))
+  #remoção
+    del lista.lista_nums[2]
+    lista.lista_nums.remove(3)
+    remocao = lista.lista_nums.pop(0)
+    
+  #ordenação
+    ordenacao = sorted(lista.lista_nums)
+    lista.lista_nums.sort()
+  #embaralhamento
+    random.shuffle(lista.lista_nums)
+
+    
+
+
 
 
 main()
